@@ -1,0 +1,275 @@
+%-------------------------------------------------------------------------------
+% This note lists the symbols defiend in atlasphysics.sty.
+%-------------------------------------------------------------------------------
+\documentclass{../atlasnote}
+
+\usepackage{../atlasphysics}
+%\usepackage{subfigure}
+%\usepackage{mathrsfs}
+
+\graphicspath{{../},{figures/}}
+
+%-------------------------------------------------------------------------------
+% Preamble
+%-------------------------------------------------------------------------------
+
+\title{Symbols defined in \texttt{atlasphysics.sty}}
+\author{Ian C. Brock}
+\draftversion{1.0}
+
+\abstracttext{%
+  This note lists the symbols defined in \texttt{atlasphysics.sty}.
+}
+
+%-------------------------------------------------------------------------------
+% This is where the document really begins
+%-------------------------------------------------------------------------------
+
+% Shorthand for \phantom to use in tables
+\newcommand{\pho}{\phantom{0}}
+\newcommand{\bslash}{\ensuremath{\backslash}}
+
+\begin{document}
+
+%-------------------------------------------------------------------------------
+\section{The \texttt{atlasphysics.sty} style file}
+\label{app:AtlasPhysicsSty}
+%-------------------------------------------------------------------------------
+
+The \texttt{atlasphysics.sty} style file implements a series of useful
+shortcuts to typeset a physics paper, such as units or particle
+symbols. It can included in the preamble of your paper with the usual
+syntax:
+%
+\begin{verbatim}
+  \usepackage{atlasphysics}
+\end{verbatim}
+%
+The style file contains among other things:
+
+\medskip
+
+\begin{tabular}{llcllcll}
+  \verb+\lapprox+ & \lapprox{} & \hspace{1cm} &
+  \verb+\rapprox+ & \rapprox{}  &\hspace{1cm} &
+  \verb+\rts+  & \rts{} \\
+  \verb+\Ecm+ & \Ecm{} & &
+  \verb+\stat+ & \stat{} & &
+  \verb+\syst+ & \syst{} \\
+\end{tabular}
+
+\medskip
+
+\begin{tabular}{llcllcll}
+  \verb+\Zboson+ & \Zboson{} & \hspace{5mm} &
+  \verb+\Wboson+ & \Wboson{} & \hspace{5mm} &
+  \verb+\Wplus+ & \Wplus{} \\
+  \verb+\Wminus+ & \Wminus{} & &
+  \verb+\Wpm+ & \Wpm{} & &
+  \verb+\Wmp+ & \Wmp{} \\
+  \verb+\Afb+ & \Afb{} & &
+  \verb+\GW+ & \GW{} & &
+  \verb+\GZ+ & \GZ{} \\
+  \verb+\Wln+ & \Wln{} & &
+  \verb+\Zll+ & \Zll{} & &
+  \verb+\Zee+ & \Zee{} \\
+  \verb+\Zmm+ & \Zmm{} & &
+  \verb+\mZ+ & \mZ{} \\
+  \verb+\mW+ & \mW{} & &
+  \verb+\mH+ & \mH{} \\
+  \verb+\Mtau+ & \Mtau{} & &
+  \verb+\swsq+ & \swsq{} & &
+  \verb+\swel+ & \swel{} \\
+  \verb+\swsqb+ &  \swsqb{} & &
+  \verb+\swsqon+ & \swsqon{} & &
+  \verb+\gv+ &  \gv{} \\
+  \verb+\ga+ & \ga{} & &
+  \verb+\gvbar+ & \gvbar{} & &
+  \verb+\gabar+ & \gabar{} \\
+  \verb+\Zprime+ & \Zprime{} & &
+  \verb+\Hboson+ & \Hboson{} & & 
+  \verb+\GH+ & \GH{} \\
+\end{tabular}
+
+\medskip
+
+\noindent The command \verb+\Zzero+ is identical to \verb+\Zboson+.
+
+\medskip
+
+\begin{tabular}{llcllcll}
+  \verb+\tbar+ & \tbar{} & \hspace{1cm} &
+  \verb+\ttbar+ & \ttbar{} & \hspace{1cm} &
+  \verb+\bbar+ & \bbar{} \\
+  \verb+\bbbar+ & \bbbar{} & &
+  \verb+\cbar+ & \cbar{} & &
+  \verb+\ccbar+ & \ccbar{} \\
+  \verb+\sbar+ & \sbar{} & &
+  \verb+\ssbar+ &  \ssbar{} & &
+  \verb+\ubar+ & \ubar{} \\
+  \verb+\uubar+ & \uubar{} & &
+  \verb+\dbar+ & \dbar{} & &
+  \verb+\ddbar+ & \ddbar{} \\
+  \verb+\fbar+ & \fbar{} & &
+  \verb+\ffbar+ &  \ffbar{} & &
+  \verb+\qbar+ & \qbar{} \\
+  \verb+\qqbar+ & \qqbar{} & &
+  \verb+\nbar+ & \nbar{} & &
+  \verb+\nnbar+ & \nnbar{} \\
+  % \verb+\e+ & \e{} & &
+  \verb+\ee+ & \ee{} & &
+  \verb+\mumu+ & \mumu{} & &
+  \verb+\tautau+ & \tautau{} \\
+  \verb+\epm+ & \epm{} & &
+  % \verb+\epem+ & \epem{} & &
+  \verb+\leplep+ & \leplep{} & & 
+  \verb+\lnu+ & \lnu{} \\
+  % \verb+\ellell+ & \ellell{} & & & \\
+\end{tabular}
+
+\medskip
+
+\begin{tabular}{llcllcll}
+  \verb+\BoBo+ & \BoBo{} & \hspace{1cm} &
+  \verb+\BodBod+ & \BodBod{} & \hspace{1cm} &
+  \verb+\BosBos+ & \BosBos{} \\
+  \verb+\Bd+ & \Bd{} & &
+  \verb+\Bs+ & \Bs{} & &
+  \verb+\Bu+ & \Bu{} \\
+  \verb+\Bc+ & \Bc{} & &
+  \verb+\Lb+ & \Lb{} & &
+  \verb+\jpsi+ & \jpsi{} \\
+  \verb+\Jpsi+ & \Jpsi{} & &
+  \verb+\Jee+ & \Jee{} & &
+  \verb+\Jmm+ & \Jmm{} \\
+  \verb+\psip+ & \psip{} & &
+  \verb+\kzero+ & \kzero{} & &
+  \verb+\kzerobar+ & \kzerobar{} \\
+  \verb+\kaon+ & \kaon{} & &
+  \verb+\kplus+ & \kplus{} & &
+  \verb+\kminus+ & \kminus{} \\
+  \verb+\klong+ & \klong{} & &
+  \verb+\kshort+ & \kshort{} & &
+  \verb+\Ups+ & \Ups{} \\
+\end{tabular}
+
+\medskip
+
+\begin{tabular}{llcllcllcll}
+  \verb+\alphas+ & \alphas{} & \hspace{1cm} &
+  \verb+\Lms+ & \Lms{} & \hspace{1cm} &
+  \verb+\Lmsfive+ & \Lmsfive{} & \hspace{1cm} &
+  \verb+\KT+ & \KT{} \\
+\end{tabular}
+
+\medskip
+
+\begin{tabular}{llcllcll}
+  \verb+\Vud+ & \Vud{} & \hspace{1cm} &
+  \verb+\Vus+ & \Vus{} & \hspace{1cm} &
+  \verb+\Vub+ & \Vub{} \\
+  \verb+\Vcd+ & \Vcd{} &  &
+  \verb+\Vcs+ & \Vcs{} &  &
+  \verb+\Vcb+ & \Vcb{} \\
+  \verb+\Vtd+ & \Vtd{} & &
+  \verb+\Vts+ & \Vts{} & & 
+  \verb+\Vtb+ & \Vtb{} \\
+\end{tabular}
+
+\medskip
+
+\begin{tabular}{llcllcll}
+  \verb+\Azero+ & \Azero{} & \hspace{1cm} &
+  \verb+\hzero+ & \hzero{} & \hspace{1cm} &
+  \verb+\Hzero+ & \Hzero{} \\
+  \verb+\Hplus+ & \Hplus{} & &
+  \verb+\Hminus+ & \Hminus{} & &
+  \verb+\Hpm+ & \Hpm{} \\
+  % \verb+\Hmp+ \Hmp{}
+\end{tabular}
+
+\medskip
+
+\noindent A generic macro \verb+\susy#1+ is defined, so that for
+example \verb+\susy{q}+ produces \susy{q} and similar.
+
+\medskip
+
+\begin{tabular}{llcllcll}
+  \verb+\chinop+ & \chinop{} & \hspace{1cm} &
+  \verb+\chinotwom+ & \chinotwom{} & \hspace{1cm} &
+  \verb+\chinopm+ & \chinopm{} \\
+  \verb+\nino+ & \nino{} & &
+  \verb+\ninothree+ & \ninothree{} & &
+  \verb+\gravino+ & \gravino{} \\
+  \verb+\squark+ & \squark{} & &
+  \verb+\gluino+ & \gluino{} & &
+  \verb+\slepton+ & \slepton{} \\
+  \verb+\stop+ & \stop{} & &
+  \verb+\stopone+ & \stopone{} & &
+  \verb+\stopL+ & \stopL{} \\
+  \verb+\sbottom+ & \sbottom{} & &
+  \verb+\sbottomtwo+ & \sbottomtwo{} & &
+  \verb+\sbottomR+ & \sbottomR{} \\
+  \verb+\sleptonL+ & \sleptonL{} & &
+  \verb+\sel+ & \sel{} & &
+  \verb+\smuR+ & \smuR{} \\
+  \verb+\stauone+ & \stauone{} & &
+  \verb+\snu+ & \snu{} & &
+  \verb+\squarkR+ & \squarkR{} \\
+\end{tabular}
+
+\medskip
+
+\noindent For \susy{q}, \susy{t}, \susy{b}, \slepton, \sel, \smu and
+\stau, L and R states are defined; for stop, sbottom and stau also the
+light (1) and heavy (2) states. There are four neutralinos and two
+charginos defined, the index number unfortunately needs to be written
+out completely. For the charginos the last letter(s) indicate(s) the
+charge: p for +, m for -, and pm for $\pm$.
+
+\medskip
+
+\begin{tabular}{llcllcll}
+  \verb+\pt+ & \pt{} & \hspace{1cm} &
+  \verb+\pT+ & \pT{} & \hspace{1cm} &
+  \verb+\et+ & \et{} \\
+  \verb+\eT+ & \eT{} & &
+  \verb+\ET+ & \ET{} & &
+  \verb+\HT+ & \HT{} \\
+  \verb+\ptsq+ & \ptsq{} & &
+  \verb+\met{}+ & \met{} & &
+\end{tabular}
+
+\medskip
+
+\noindent Use \verb+\met{}+ rather than just \verb+\met+ to get the spacing
+right. In principle this works for any macro, although in most cases it will
+not be needed as {\tt xspace.sty} will take care of the spacing. Somehow
+{\tt xspace.sty} doesn't do a good job for \met.
+
+\vspace{5mm}
+
+\begin{tabular}{llcllcll}
+\verb+\ifb+ & \ifb{} & \hspace{1cm} &
+\verb+\ipb+ & \ipb{} & \hspace{1cm} &
+\verb+\inb+ & \inb{} \\
+\verb+\TeV+ & \TeV{} & &
+\verb+\GeV+ & \GeV{} & &
+\verb+\MeV+ & \MeV{} \\
+\verb+\keV+ & \keV{} & &
+\verb+\eV+ & \eV{} & & & \\
+\end{tabular}
+
+\medskip
+
+\noindent And \verb+\tev+, \verb+\gev+, \verb+\mev+, \verb+\kev+, and
+\verb+\ev+ have the same results.
+
+\medskip
+
+\noindent A generic macro \verb+\mass#1+ is defined, so that for example
+\verb+\mass{\mu}+ produces \mass{\mu} and similar.
+\verb+\twomass{\mu e}+ will produce \twomass{\mu e}.
+
+\end{document}

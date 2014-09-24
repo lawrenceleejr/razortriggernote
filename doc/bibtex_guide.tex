@@ -1,0 +1,175 @@
+%-------------------------------------------------------------------------------
+% Examples on how to fill BibTeX entries in the ATLAS Bibliographic Style
+% Responsible: Ian Brock (Ian.Brock@cern.ch)
+%-------------------------------------------------------------------------------
+\documentclass{../atlasnote}
+
+\usepackage{../atlasphysics}
+\usepackage[colorlinks,breaklinks,pdftitle={ATLAS BibTeX guide},pdfauthor={Ian Brock}]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue}
+
+\graphicspath{{../}}
+
+\newcommand*{\BibTeX}{Bib\TeX}
+
+\title{Quick guide to ATLAS BibTeX style}
+\author{Ian C. Brock}
+
+\abstracttext{%
+	This documents illustrates how to use \BibTeX for the bibliography of your ATLAS paper.
+	Two \BibTeX (\texttt{.bst}) style files have been created that can be used with any of the ATLAS supported journals,
+	depending on whether they require the title of the references to be included or not.
+}
+
+
+%-------------------------------------------------------------------------------
+\begin{document} 
+
+\maketitle
+
+%-------------------------------------------------------------------------------
+\section{Instructions}
+%-------------------------------------------------------------------------------
+
+The ATLAS Collaboration has specific guidelines as to what constitutes a good bibliographic style. 
+For example, a reference to a paper by an LHC Collaboration must not include the first author whereas if the paper is by any other collaboration, it should. 
+Also, where available, links to the \texttt{arXiv} entries of the papers must be included. 
+To help authors with their paper preparations, a standard ATLAS bibliographic style has been developed which incorporates all of these requirements, 
+and, at the same time, is compatible with those of the journals the papers are being submitted to. 
+
+The format of the references in your ATLAS paper depends on the journal to which you are submitting,
+but in general we can classify the journal styles in two categories: those which require the title of the references and those which do not. 
+To ensure the homogeneity in all ATLAS publications, 
+\BibTeX style files are provided for each of these categories along with an example file that illustrates how different types of bibliographic material should be referenced.
+Authors must choose between these two style files, depending on the journal to which they wish to submit their paper.
+
+\noindent \textcolor{red}{Important:} Please use these files and base your \texttt{.bib} file on the example provided,
+as it has the references in the style preferred by the ATLAS PubCom and will definitely save time in the reviewing process!
+
+\noindent These style files have been successfully tested in the framework provided by each of the journals listed in the following sections and with the standard ATLAS Note template.
+
+%-------------------------------------------------------------------------------
+\section{`With Title'}
+%-------------------------------------------------------------------------------
+
+Journals:
+\begin{itemize}
+\item \textbf{JHEP}
+\item \textbf{JINST}
+\item \textbf{NJP}
+\end{itemize}
+
+\bigskip
+\noindent BibTeX style file: \\
+\indent \textbf{atlasBibStyleWithTitle.bst}
+
+\bigskip
+\noindent BibTeX example bibliography file: \\
+\indent \textbf{atlasBibStyleExample.bib}
+
+\bigskip
+\noindent Include at the end of your \textbf{.tex} file the following lines: \\
+\indent \texttt{\textbackslash bibliographystyle$\{$atlasBibStyleWithTitle$\}$}  \% - - - - $>$ Name of \emph{.bst} file \\
+\indent \texttt{\textbackslash bibliography$\{$atlasBibStyleExample$\}$}  \% - - $>$ Name of your \emph{.bib} file
+
+\bigskip
+\noindent To compile: \\
+\indent \textbf{LaTeX + BibTeX + LaTeX + LaTeX} 
+
+
+%-------------------------------------------------------------------------------
+\section{`Without Title'}
+%-------------------------------------------------------------------------------
+
+Journals: \\
+\indent \textbf{EPJC} \\
+\indent \textbf{NPB} \\
+\indent \textbf{PLB} \\
+\indent \textbf{PRD} \\
+\indent \textbf{PRL}
+
+\bigskip
+\noindent BibTeX style file: \\
+\indent \textbf{atlasBibStyleWoTitle.bst}
+
+\bigskip
+\noindent BibTeX example bibliography file: \\
+\indent \textbf{atlasBibStyleExample.bib}
+
+\bigskip
+\noindent Include at the end of your \textbf{.tex} file the following lines: \\
+\indent \texttt{\textbackslash bibliographystyle$\{$atlasBibStyleWoTitle$\}$}  \% - - - - $>$ Name of \emph{.bst} file \\
+\indent \texttt{\textbackslash bibliography$\{$atlasBibStyleExample$\}$}  \% - - $>$ Name of your \emph{.bib} file
+
+\bigskip
+\noindent To compile: \\
+\indent \textbf{LaTeX + BibTeX + LaTeX + LaTeX} 
+
+
+%-------------------------------------------------------------------------------
+\section{ATLAS Notes}
+%-------------------------------------------------------------------------------
+
+For ATLAS Notes, the recommended style file is: \\
+\indent \textbf{atlasBibStyleWoTitle.bst}.\\
+
+\noindent Both style files are now provided with the \texttt{atlasnote} package.
+
+
+%-------------------------------------------------------------------------------
+\section{Useful BibTeX tips}
+%-------------------------------------------------------------------------------
+
+\begin{itemize}
+	\item A bibliographic item is created in the \emph{.bib} file as: \\
+		\texttt{@Article\{lhcCollaboration:2012 \\ \emph{\% bibliographic information}} \\ \} \\
+		\\
+		The identifier directly after the document type declaration is how we are going to refer to this item inside the main \emph{.tex} file: \\
+		{\small{\texttt{Example of a paper from a LHC Collaboration is given in} $\backslash$cite\{lhcCollaboration:2012\}.}}
+	\item When referencing ATLAS CONF notes, the url to the CDS page should be included. For this to work, in the preamble of your \emph{.tex} document add: \\
+		\texttt{$\backslash$usepackage\{hyperref\}}
+	\item If the DOI is filled and the \texttt{hyperref} package loaded, the title of the journal will be highlighted in blue and become a hyperlink to the online paper.
+	\item To cite multiple references in the format [A-Z], include the following package in the header of your document: \\
+	         \texttt{$\backslash$usepackage\{cite\}}	
+	\item \textbf{\color{red} New:} When referencing papers from journals like PRD, PLB, etc., one has to be careful not to include the ``D" or ``B" as part of the volume but rather in the journal name. New macros have been added to the \textbf{.bst} style files for these journals. Please use these.
+\end{itemize}
+
+
+%-------------------------------------------------------------------------------
+\section{Examples}
+%-------------------------------------------------------------------------------
+
+\begin{itemize}
+	\item LHC Collaboration~\cite{lhcCollaboration:2012}
+	\item Other Collaboration~\cite{otherCollaboration:2007}
+	\item Individual authors~\cite{authors:2008}
+	\item arXiv only~\cite{arxivOnly:2009}
+	\item arXiv only submitted to a journal~\cite{arxivSub:2011}
+	\item ATLAS CONF Note~\cite{atlasConf:2012} 
+\end{itemize}
+
+While the \texttt{collaboration} field is a nice idea, it is not supported by many \BibTeX\ styles.
+Hence in \cite{lhcCollaboration:2012}, \texttt{collaboration} has been renamed to \texttt{author} and
+the \texttt{author} field has been renamed as \texttt{xauthor}. If you use \texttt{collaboration} and omit
+\texttt{author} you will get a warning when you run \texttt{bibtex}. This you see in \cite{atlasConf:2012}.
+
+Note that in Ref.~\cite{atlasConf:2012} the entry type \texttt{@Article} is used and the field \texttt{journal} 
+is abused for the conference note number. This is a result of the \BibTeX resrictions on the entry types.
+\texttt{biblatex} provides a lot more entry types. It is planned to move to \texttt{biblatex} or the ATLAS templates
+in the course of 2014.
+
+
+%-------------------------------------------------------------------------------
+\section*{History}
+%-------------------------------------------------------------------------------
+
+\begin{description}
+  \item[2013-08-13: Cristina Oropeza Barrera] First version of the document released.
+  \item[2014-08-14: Ian Brock] Updated the example references a bit and gave a bit more background information.
+\end{description}
+
+%-------------------------------------------------------------------------------
+\bibliographystyle{../atlasBibStyleWithTitle}
+\bibliography{bibtex_guide}
+
+\end{document}

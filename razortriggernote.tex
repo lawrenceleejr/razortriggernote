@@ -1,0 +1,101 @@
+%-------------------------------------------------------------------------------
+% This file provides a skeleton ATLAS document
+%-------------------------------------------------------------------------------
+\documentclass{atlasnote} 
+% Options:
+%		nomaketitle Do not run \maketitle from the class
+%		coverpage	  Create ATLAS draft cover page for collaboration circulation
+%							  atlascover.sty must be in this directory or a system directory.
+%							  See coveronly.tex for a list of variables that should be defined.
+%							  Do not include the hyperref package in this file when you set coverpage.
+%		CONF			  This is a CONF note
+%		usetikz		  Load tikz package in the right place
+
+%-------------------------------------------------------------------------------
+% Extra packages:
+% See doc/atlasphyics.pdf for a list of the defined symbols
+%\usepackage{atlasphysics}
+% Comment out hyperref if you use coverpage
+%\usepackage[colorlinks,breaklinks,pdftitle={ATLAS draft},pdfauthor={The ATLAS Collaboration}]{hyperref}  
+%\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue} 
+
+%-------------------------------------------------------------------------------
+% Specify title, author, abstract and document numbers here
+
+% Title
+\title{HLT Hadronic ``Razor'' Trigger}
+
+% Author --  Default is ``The ATLAS collaboration''
+%\author{The ATLAS Collaboration}
+
+% if multiple authors/affiliations are needed, use the authblk package
+\usepackage{authblk}
+\renewcommand\Authands{, } % avoid ``. and'' for last author
+\renewcommand\Affilfont{\itshape\small} % affiliation formatting
+
+\author[a]{Lawrence Lee}
+
+\affil[a]{The University of Adelaide}
+
+% Date: if not given, uses current date
+%\date{\today}
+
+% Draft version: if given, adds draft version on front page, a
+% 'DRAFT' box on top of each other page, and line numbers to easy
+% commenting. Comment or remove in final version.
+\draftversion{x.y}
+
+% Journal: adds a 
+% \journal{Phys. Lett. B} 
+
+% Abstract
+\abstracttext{
+  This note describes the implementation and characterization of the class of hadronic ``Razor'' triggers for run 2. These triggers utilize the super-razor variable basis for a trigger hypothesis at HLT carefully removing uncorrelated jet events from the rate, allowing for high signal acceptances for many searches for heavy particles. Timing and rate studies are performed as well as studies in combinations with HLT-level b-tagging and lepton objects.
+}
+
+%-------------------------------------------------------------------------------
+% Content
+%-------------------------------------------------------------------------------
+\begin{document}
+
+%\maketitle
+
+% List of contributors to the analysis
+% The width of the name is an optional argument
+\begin{atlascontribute}
+
+\item[Student,] stuff
+\item[Postdoc,Larry] HLT implementation code for hemisphere reconstruction and variable calculation
+\item[Postdoc,Chris] Initial Razor trigger studies on CMS and creation of new variable basis used here
+\end{atlascontribute}
+\clearpage
+
+% Test of tikz.sty loading in atlasnote.cls. Use 'usetikz' option in documentclass declaration
+%\input{tikz-test}
+
+%-------------------------------------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+%-------------------------------------------------------------------------------
+
+Efforts to construct a variable basis for searches for new physics in the form of new resonant states have produced various schemes (e.g. Razor, Super-Razor, Recursive Jigsaw). 
+
+
+
+Place your introduction here
+
+%-------------------------------------------------------------------------------
+\section{Results}
+\label{sec:result}
+%-------------------------------------------------------------------------------
+
+Place your results here
+
+%-------------------------------------------------------------------------------
+\section{Conclusion}
+\label{sec:conclusion}
+%-------------------------------------------------------------------------------
+
+Place your conclusion here
+
+\end{document}
